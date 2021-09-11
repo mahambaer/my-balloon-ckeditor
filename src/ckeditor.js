@@ -45,6 +45,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table.js';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar.js';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+import Mathematics from 'ckeditor5-math/src/math';
 
 class Editor extends BalloonBlockEditor {}
 
@@ -91,7 +92,21 @@ Editor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Underline
+	Underline,
+	Mathematics
 ];
+
+Editor.defaultConfig = {
+	// ...
+	math: {
+		engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
+		lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
+		outputType: 'span', // or span
+		forceOutputType: false, // forces output to use outputType
+		enablePreview: true, // Enable preview view
+		previewClassName: [], // Class names to add to previews
+		popupClassName: [] // Class names to add to math popup balloon
+	}
+}
 
 export default Editor;

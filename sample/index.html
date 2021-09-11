@@ -10,6 +10,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
 		<link rel="stylesheet" type="text/css" href="styles.css">
+		<!-- MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+			tex2jax: {
+			inlineMath: [["$","$"],["\\(","\\)"]],
+			displayMath:[["$$", "$$"], ["\\[","\\]"]]
+			},
+			showMathMenu: false,
+			messageStyle: "none"
+			});
+		</script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 	</head>
 	<body data-editor="BalloonBlockEditor" data-collaboration="false">
 		<header>
@@ -132,7 +144,8 @@
 					'outdent',
 					'numberedList',
 					'bulletedList',
-					'fontColor'
+					'fontColor',
+					'math'
 				],
 				image: {
 					toolbar: [
