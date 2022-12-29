@@ -100,15 +100,15 @@ Editor.builtinPlugins = [
 
 Editor.defaultConfig = {
 	// ...
-	// math: {
-	// 	engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
-	// 	lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
-	// 	outputType: 'span', // or span
-	// 	forceOutputType: false, // forces output to use outputType
-	// 	enablePreview: true, // Enable preview view
-	// 	previewClassName: [], // Class names to add to previews
-	// 	popupClassName: [] // Class names to add to math popup balloon
-	// }
+	math: {
+		engine: 'mathjax', // or katex or function. E.g. (equation, element, display) => { ... }
+		lazyLoad: undefined, // async () => { ... }, called once before rendering first equation if engine doesn't exist. After resolving promise, plugin renders equations.
+		outputType: 'span', // or span
+		forceOutputType: false, // forces output to use outputType
+		enablePreview: true, // Enable preview view
+		previewClassName: [], // Class names to add to previews
+		popupClassName: [] // Class names to add to math popup balloon
+	},
 	simpleUpload: {
 		// The URL that the images are uploaded to.
 		uploadUrl: window.location.origin + '/api/image/upload',
