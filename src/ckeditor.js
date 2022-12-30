@@ -111,7 +111,7 @@ Editor.defaultConfig = {
 	},
 	simpleUpload: {
 		// The URL that the images are uploaded to.
-		uploadUrl: window.location.origin + '/api/image/upload/' + localStorage.getItem('lpkId'),
+		uploadUrl: window.location.origin + '/api/image/upload?lpk=' + localStorage.getItem('lpkId'),
 	}
 }
 
