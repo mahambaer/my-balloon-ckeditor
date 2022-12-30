@@ -6,7 +6,7 @@ import BalloonBlockEditor from '@ckeditor/ckeditor5-editor-balloon/src/ballooned
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat.js';
 import AutoImage from '@ckeditor/ckeditor5-image/src/autoimage.js';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink.js';
-import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter.js';
+// import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter.js';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote.js';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar.js';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold.js';
@@ -111,7 +111,7 @@ Editor.defaultConfig = {
 	},
 	simpleUpload: {
 		// The URL that the images are uploaded to.
-		uploadUrl: window.location.origin + '/api/image/upload',
+		uploadUrl: window.location.origin + '/api/image/upload/' + localStorage.getItem('lpkId'),
 	}
 }
 
